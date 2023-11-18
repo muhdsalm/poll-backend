@@ -12,8 +12,13 @@ export class MongoHandlerService{
         return this.db.collection('users')
     }
 
+    getPollDB() {
+        return this.db.collection('polls')
+    }
+
     cleanDB() {
         this.db.collection('users').deleteMany()
+        this.db.collection('polls').deleteMany()
     }
 
 }
