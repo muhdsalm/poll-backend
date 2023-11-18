@@ -126,17 +126,24 @@ describe('App e2e', () => {
       })
     })
 
-    describe('View Polls', () => {})
 
   })
 
   describe('Poll', () => {
 
-    describe('Create Poll', () => {})
+    describe('Create Poll', () => {
+      
+    })
 
     describe('Delete Poll', () => {})
 
-    describe('Vote on Poll', () => {})
+    describe('View Polls', () => {})
+
+    describe('Vote on Poll', () => {
+      it("Should get a random document from mongodb", () => {
+        return pactum.spec().get("/polls")
+      })
+    })
 
   })
 })
